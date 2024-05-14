@@ -35,7 +35,8 @@ const MemberList = () => {
     e.preventDefault();
     try {
       let result = await axios.post(
-        "http://localhost:8000/api/member/postProfile",
+        "https://a2.arya-erp.in/api2/socapi/api/member/postProfile",
+
         excelData
       );
       console.log(result);

@@ -24,7 +24,9 @@ const Bills = () => {
 
   async function getHead() {
     try {
-      let result = await axios.get("http://localhost:8000/api/master/getHead");
+      let result = await axios.get(
+        "https://a2.arya-erp.in/api2/socapi/api/master/getHead"
+      );
       setOptions([...result.data]);
       console.log(result);
     } catch (error) {

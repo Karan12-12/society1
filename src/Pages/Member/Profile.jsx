@@ -38,7 +38,7 @@ const Profile = () => {
     e.preventDefault();
     try {
       let result = await axios.post(
-        "http://localhost:8000/api/member/postProfile",
+        "https://a2.arya-erp.in/api2/socapi/api/member/postProfile",
         formData,
         {
           headers: {
@@ -47,6 +47,7 @@ const Profile = () => {
         }
       );
       console.log(result);
+      // https://a2.arya-erp.in/api2/socapi/api/member/postProfile
     } catch (error) {
       console.log(error);
     }

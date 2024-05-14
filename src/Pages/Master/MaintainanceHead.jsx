@@ -51,8 +51,8 @@ const MaintenanceHeaders = () => {
 
     try {
       let result = await axios.post(
-        "http://localhost:8000/api/master/masterHead",
-        { headers: headers, under: selectedValue }
+        "https://a2.arya-erp.in/api2/socapi/api/master/masterHead",
+        [{ Header: headers, Under: selectedValue }]
       );
       console.log(result);
       setHeaders("");
@@ -67,8 +67,19 @@ const MaintenanceHeaders = () => {
   const [typeError, setTypeError] = useState(null);
   const [excelData, setExcelData] = useState(null);
 
-  const handleUpload = () => {
+  const handleUpload = async (e) => {
     setUpload(true);
+    e.preventDefault();
+    try {
+      let result = await axios.post(
+        "https://a2.arya-erp.in/api2/socapi/api/master/masterHead",
+
+        excelData
+      );
+      console.log(result);
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   const handleFile = (e) => {

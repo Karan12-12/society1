@@ -29,7 +29,6 @@ function App() {
     { title: "newLedger", link: "/master/ledger/newledger" },
     { title: "Society", link: "/society" },
     { title: "Bills", link: "/society/bills" },
-
     { title: "Profile", link: "/member/profile" },
     { title: "Transactions", link: "/member/transactions" },
     { title: "Member List", link: "/member/member-list" },
